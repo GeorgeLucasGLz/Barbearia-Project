@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+    <title>Barber Shop</title>
+
+</head>
+
+<header>
+    <figure>
+        <figcaption>
+            <img src="./img/logo.png" alt="logo-cabecalho" id="logo-header">
+        </figcaption>
+    </figure>
+
+    <div id="links">
+        <a href="index.html">Home</a>
+        <a href="servicos.html">Nossos Serviços</a>
+        <a href="javascript:clickButton()">Fale Conosco</a>
+    </div>
+</header>
+
+<body>
+
+
+    <main>
+        <section id="descricao">
+            <figure id="caixa-imagem">
+                <figcaption>
+                    <img src="./img/logo.png" alt="logo" id="logo-img">
+                </figcaption>
+            </figure>
+            <p id="p1">Venha ficar na Reguá com a <span>Barber Shop.</span></p>
+            <br>
+            <p id="p2">Na nossa barbearia, você desfrutará de cortes de cabelo
+                e barba impecáveis, além de um ambiente descontraído e acolhedor.
+                Junte-se a nós para uma experiência de cuidados masculinos que
+                combina habilidade, tradição e um toque moderno.
+                Venha nos visitar e transforme sua aparência com estilo.</p>
+            <button id="btn"><a href="servicos.html" id="linkServices">Ver Serviços</a></button>
+        </section>
+
+
+        <div class="mascara"></div>
+
+        <section id="lado-treino-banner">
+            <figure id="caixa-banner">
+                <figcaption>
+                    <img src="img/banner.png" alt="bannerAlt" id="corte-img">
+                </figcaption>
+            </figure>
+        </section>
+
+
+
+        <form id="fale-conosco">
+            <input placeholder="Seu Nome" type="text" name="Nome" id="nameContact">
+            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" id="telContact" type="tel" name="Telefone" maxlength="15" onkeyup="handlePhone(event)">
+            <textarea placeholder="Dúvidas / Pedidos" name="Dúvida"></textarea>
+            <button id="btn" class="btn-orcamento" onclick="contactHeader()">Entrar em Contato</button>
+        </form>
+        <div id="mascara-formulario" onclick="desligarMascara()"></div>
+
+
+
+    </main>
+    <div class="link-zap">
+        <a href="https://api.whatsapp.com/send?phone=5585992406549" target="_blank" id="lin">
+            <img src="./img/whatsapp.png" alt="whatsapp-img" id="zap-img">
+        </a>
+    </div>
+
+
+
+</body>
+<script src="./scripts.js"></script>
+
+</html>
