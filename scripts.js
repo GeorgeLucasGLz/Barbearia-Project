@@ -132,34 +132,34 @@ const imgForm = document.querySelector('#corteForm')
 
 function mudarImg1() {
     clickButton()
-    imgForm.src = 'img/corte1.jpg'
+    imgForm.src = 'img/corte1.webp'
     hair.value = "Corte Número 1"
 
 }
 
 function mudarImg2() {
     clickButton()
-    imgForm.src = 'img/corte2.jpg'
+    imgForm.src = 'img/corte2.webp'
     hair.value = "Corte Número 2"
 
 }
 
 function mudarImg3() {
     clickButton()
-    imgForm.src = 'img/low-fade.jpg'
+    imgForm.src = 'img/low-fade.webp'
     hair.value = "Corte Número 3"
 
 
 }
 function mudarImg4() {
     clickButton()
-    imgForm.src = 'img/high-fade.jpg'
+    imgForm.src = 'img/high-fade.webp'
     hair.value = "Corte Número 4"
 }
 
 function mudarImg5() {
     clickButton()
-    imgForm.src = 'img/mid-fade.jpg'
+    imgForm.src = 'img/mid-fade.webp'
     hair.value = "Corte Número 5"
 
 }

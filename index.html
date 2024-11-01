@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" href="img/logo.png"/>
+    <link rel="icon" type="image/png" href="img/logo.png" />
     <title>Barber Shop</title>
 
 </head>
@@ -31,7 +31,7 @@
         <section id="descricao">
             <figure id="caixa-imagem">
                 <figcaption>
-                    <img src="./img/logo.png" alt="logo" id="logo-img">
+                    <img src="./img/logo.webp" alt="logo" id="logo-img">
                 </figcaption>
             </figure>
             <p id="p1">Venha ficar na Reguá com a <span>Barber Shop.</span></p>
@@ -41,7 +41,9 @@
                 Junte-se a nós para uma experiência de cuidados masculinos que
                 combina habilidade, tradição e um toque moderno.
                 Venha nos visitar e transforme sua aparência com estilo.</p>
-            <button id="btn"><a href="servicos.html" id="linkServices">Ver Serviços</a></button>
+            <a href="servicos.html" id="linkServices">
+                <button id="btn">Ver Serviços</button>
+            </a>
         </section>
 
 
@@ -50,7 +52,7 @@
         <section id="lado-treino-banner">
             <figure id="caixa-banner">
                 <figcaption>
-                    <img src="img/banner.png" alt="bannerAlt" id="corte-img">
+                    <img src="img/banner2.webp" alt="bannerAlt" id="corte-img">
                 </figcaption>
             </figure>
         </section>
@@ -59,7 +61,8 @@
 
         <form id="fale-conosco">
             <input placeholder="Seu Nome" type="text" name="Nome" id="nameContact">
-            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" id="telContact" type="tel" name="Telefone" maxlength="15" onkeyup="handlePhone(event)">
+            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" id="telContact" type="tel" name="Telefone"
+                maxlength="15" onkeyup="handlePhone(event)">
             <textarea placeholder="Dúvidas / Pedidos" name="Dúvida"></textarea>
             <button id="btn" class="btn-orcamento" onclick="contactHeader()">Entrar em Contato</button>
         </form>
