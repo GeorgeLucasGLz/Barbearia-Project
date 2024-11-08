@@ -5,6 +5,28 @@ const mascaraHeader = document.querySelector('#mascaraHeader')
 const formHeader = document.querySelector('#fale-conosco-header')
 
 
+const btnToggleOn = document.querySelector('.btn-toggle-on')
+const btnCloseToggle = document.querySelector('.btn-toggle-close')
+const toggleOn = document.querySelector('.toggle-on')
+
+function showMenuToggle() {
+    btnToggleOn.style.opacity = '0'
+    toggleOn.style.display = 'flex'
+
+    setTimeout(() => {
+        toggleOn.classList.add('active')
+    }, 10)
+}
+
+function closeMenuToggle() {
+    btnToggleOn.style.opacity = '1'
+    toggleOn.classList.remove('active')
+
+    setTimeout(() => {
+        toggleOn.style.display = 'none'
+    }, 300) // 300ms é o tempo da nossa transição CSS
+}
+
 function preLoadImage(url){
     let img = new Image
     img.src = url
@@ -24,7 +46,7 @@ function clickButtonHeader() {
     formHeader.style.transform = "translateX(-50%)"
     mascaraHeader.style.visibility = "visible"
     formHeader.style.transition = "0.4s ease-in"
-
+    closeMenuToggle()
 
 }
 

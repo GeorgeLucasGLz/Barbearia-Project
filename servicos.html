@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="services.css">
-    <link rel="icon" type="image/png" href="img/logo.png"/>
+    <link rel="icon" type="image/png" href="img/logo.png" />
     <title>Barber Services</title>
 
 </head>
@@ -17,17 +17,38 @@
         </figcaption>
     </figure>
 
-    <div id="links">
+    <div id="links" class="toggle-off">
         <a href="index.html">Home</a>
         <a href="#">Nossos Serviços</a>
         <a href="javascript:clickButtonHeader()">Fale Conosco</a>
 
     </div>
+
+    <button class="btn-toggle-on" onclick="showMenuToggle()">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+
+    </button>
+
+    <ul class="toggle-on">
+        <a href="index.html">Home</a>
+        <a href="javascript:clickButtonHeader()">Fale Conosco</a>
+
+        <button class="btn-toggle-close" onclick="closeMenuToggle()">
+
+            <span></span>
+            <span></span>
+        </button>
+    </ul>
+
 </header>
 
 <body>
     <div class="mascara"></div>
-    
+
 
     <main>
 
@@ -37,17 +58,19 @@
 
                 <li class="card-list">
                     <div class="image-side">
-                        <h1 class="title-card">
-                            Corte 1
-                        </h1>
-                        <img src="img/corte1.webp" class="img-list">
-                    </div>
-                    <div class="info-card">
+                        <h1>Corte 1</h1>
                         <p>Valor: R$ 20,00
                         </p>
+                        <img src="img/corte1.webp" class="img-list">
+
                     </div>
 
-                    <button class="btn-card" value="corte1" onclick="mudarImg1()">Escolher Corte</button>
+
+
+                    <button class="btnCorte" value="corte1" onclick="mudarImg1()">
+                        <span>Escolher Corte</span>
+                    </button>
+
 
                     <div class="card-logo">
                         <img src="img/logo.png">
@@ -55,18 +78,18 @@
                 </li>
                 <li class="card-list">
                     <div class="image-side">
-                        <h1 class="title-card">
-                            Corte 2
-                        </h1>
+                        <h1>Corte 2</h1>
+                        <p>Valor: R$ 25,00
+                        </p>
                         <img src="img/corte2.webp" class="img-list">
                     </div>
 
-                    <div class="info-card">
-                        <p>Valor: R$ 25,00
-                        </p>
-                    </div>
 
-                    <button class="btn-card" id="btnCut2" onclick="mudarImg2()">Escolher Corte</button>
+                    <button class="btnCorte" onclick="mudarImg2()">
+                        <span>
+                            Escolher Corte
+                        </span>
+                    </button>
 
                     <div class="card-logo">
                         <img src="img/logo.webp">
@@ -75,17 +98,17 @@
                 </li>
                 <li class="card-list">
                     <div class="image-side">
-                        <h1 class="title-card">
-                            Corte 3
-                        </h1>
-                        <img src="img/low-fade.webp" class="img-list">
-                    </div>
-                    <div class="info-card">
+                        <h1>Corte 3</h1>
                         <p>Valor: R$ 15,00
                         </p>
+                        <img src="img/low-fade.webp" class="img-list">
                     </div>
 
-                    <button class="btn-card" onclick="mudarImg3()">Escolher Corte</button>
+                    <button class="btnCorte" onclick="mudarImg3()">
+                        <span>
+                            Escolher Corte
+                        </span>
+                    </button>
 
                     <div class="card-logo">
                         <img src="img/logo.png">
@@ -94,17 +117,18 @@
 
                 <li class="card-list">
                     <div class="image-side">
-                        <h1 class="title-card">
-                            Corte 4
-                        </h1>
-                        <img src="img/high-fade.webp" class="img-list">
-                    </div>
-                    <div class="info-card">
+                        <h1>Corte 3</h1>
                         <p>Valor: R$ 22,00
                         </p>
+                        <img src="img/high-fade.webp" class="img-list">
                     </div>
 
-                    <button class="btn-card" onclick="mudarImg4()">Escolher Corte</button>
+
+                    <button class="btnCorte" onclick="mudarImg4()">
+                        <span>
+                            Escolher Corte
+                        </span>
+                    </button>
 
                     <div class="card-logo">
                         <img src="img/logo.png">
@@ -113,17 +137,18 @@
 
                 <li class="card-list">
                     <div class="image-side">
-                        <h1 class="title-card">
-                            Corte 5
-                        </h1>
-                        <img src="img/mid-fade.webp" class="img-list">
-                    </div>
-                    <div class="info-card">
+                        <h1>Corte 3</h1>
                         <p>Valor: R$ 18,00
                         </p>
+                        <img src="img/mid-fade.webp" class="img-list">
                     </div>
 
-                    <button class="btn-card" onclick="mudarImg5()">Escolher Corte</button>
+
+                    <button class="btnCorte" onclick="mudarImg5()">
+                        <span>
+                            Escolher Corte
+                        </span>
+                    </button>
 
                     <div class="card-logo">
                         <img src="img/logo.png">
@@ -137,12 +162,13 @@
 
 
         <form id="fale-conosco">
-            <input placeholder="Seu Nome" type="text" name="Nome" id="name">
-            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" id="tel" maxlength="15" onkeyup="handlePhone(event)">
+            <input placeholder="Seu Nome" type="text" name="Nome" id="name" autocomplete="off">
+            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" id="tel" maxlength="15"
+                onkeyup="handlePhone(event)" autocomplete="off">
             <label>Corte Escolhido</label>
-        
+
             <img src="" id="corteForm">
-            <input type="hidden" name="Corte Escolhido" type="text" id="hair">
+            <input type="hidden" name="Corte Escolhido" type="text" id="hair" autocomplete="off">
             <label>Selecionar Horário</label>
             <select name="horario" id="hourSelect">
                 <option>Selecione um Horário</option>
@@ -159,7 +185,7 @@
                 <option value="18:00">18:00</option>
                 <option value="19:00">19:00</option>
                 <option value="20:00">20:00</option>
-            
+
 
             </select>
             <button id="btn" class="btn-orcamento" onclick="enviarForm()">Enviar Agendamento</button>
@@ -168,7 +194,8 @@
 
         <form id="fale-conosco-header">
             <input placeholder="Seu Nome" type="text" name="Nome" id="nameContact">
-            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" id="telContact" maxlength="15" onkeyup="handlePhone(event)">
+            <input placeholder="Seu celular, ex: (xx) xxxxx-xxxx" type="tel" name="Telefone" id="telContact"
+                maxlength="15" onkeyup="handlePhone(event)">
             <textarea placeholder="Dúvidas / Pedidos" name="Dúvida"></textarea>
             <button id="btn" class="btn-orcamento" onclick="contactHeader()">Entrar em Contato</button>
         </form>
@@ -177,8 +204,7 @@
 
     </main>
     <div class="link-zap">
-        <a href="https://api.whatsapp.com/send?phone=5585992406549"
-            target="_blank" id="lin">
+        <a href="https://api.whatsapp.com/send?phone=5585992406549" target="_blank" id="lin">
             <img src="./img/whatsapp.png" alt="whatsapp-img" id="zap-img">
         </a>
     </div>
