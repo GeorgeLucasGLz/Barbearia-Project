@@ -62,9 +62,9 @@ main {
 /* Seção de descrição */
 #descricao {
     flex: 1;
-    max-width: 600px;
+    max-width: 50%;
     color: white;
-    padding: 1rem;
+   
     z-index: 2;
 }
 
@@ -87,7 +87,7 @@ main {
 
 /* Botão de serviços */
 #btn {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     font-size: 1rem;
     font-weight: bold;
     background: linear-gradient(to right, #e0ff00, #c04b00);
@@ -340,12 +340,12 @@ textarea {
 
     header {
         margin: 0;
-        position: static;
-        top: 30px;
+        position: fixed;
+        top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
+
     }
 
     header a:hover {
